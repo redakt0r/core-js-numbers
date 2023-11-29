@@ -49,8 +49,9 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function getAverage(value1, value2) {
+  if (!Number.isFinite((value1 + value2) / 2)) return Number.MAX_VALUE;
+  return (value1 + value2) / 2;
 }
 
 /**
@@ -608,8 +609,9 @@ function getRandomInteger(min, max) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  if (!Number.isFinite(Math.sqrt(a ** 2 + b ** 2))) return Number.MAX_VALUE;
+  return Math.sqrt(a ** 2 + b ** 2);
 }
 
 /**
