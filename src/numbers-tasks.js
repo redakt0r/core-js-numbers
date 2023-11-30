@@ -126,7 +126,7 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return Number(value.toString().slice(-1));
+  return value % 10;
 }
 
 /**
@@ -612,8 +612,7 @@ function getRandomInteger(min, max) {
  * 3, 4 => 5
  */
 function getHypotenuse(a, b) {
-  if (!Number.isFinite(Math.sqrt(a ** 2 + b ** 2))) return Number.MAX_VALUE;
-  return Math.sqrt(a ** 2 + b ** 2);
+  return Math.hypot(a, b);
 }
 
 /**
